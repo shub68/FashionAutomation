@@ -39,7 +39,7 @@ public class TestBase {
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 			driver.get(prop.getProperty("url"));
-			driver.manage().deleteAllCookies();
+			//driver.manage().deleteAllCookies();
 		}
 	}
 	

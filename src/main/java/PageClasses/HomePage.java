@@ -10,7 +10,9 @@ public class HomePage extends TestBase{
 	
 	@FindBy(xpath="//a[@class='login']")
 	private WebElement HomesignInButton;
-
+	
+	@FindBy(xpath="//li[@class='facebook']")
+	private WebElement facebook;
 	public WebElement getHomesignInButton() {
 		return HomesignInButton;
 	}
@@ -20,6 +22,12 @@ public class HomePage extends TestBase{
 		return new signIn();
 	}
 	
+	
+	public facebook clickFacebook() {
+		facebook.click();
+		return new facebook();
+		
+	}
 	
 	public HomePage() {
 		PageFactory.initElements(driver,this);

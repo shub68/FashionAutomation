@@ -37,23 +37,13 @@ public class TC_01_SigIn extends TestBase {
 
 	@Test(priority = 2)
 	public void onSignInPage() throws InterruptedException {
-		Assert.assertEquals(si.checkSignInTextVisibility(), true);
-		String msg=si.sendData(prop.getProperty("username"),prop.getProperty("password"));
-		/*if(msg.equalsIgnoreCase("SignIn Successfull")) {
-			
-			ma=new MyAccount();
-		
-		}
-		else if(msg.equalsIgnoreCase("SignIn UnsucessFull")) {
-			cap=si.createAccount(prop.getProperty("newemail"));
-			
-		}*/
-			
+		Assert.assertEquals(si.checkSignInTextVisibility(),true);
+		cap=si.createAccount(prop.getProperty("username"));
 	}
 
-	@AfterTest
+	/*@AfterTest
 	public void tearDown() {
 		closeall();
-	}
+	}*/
 
 }

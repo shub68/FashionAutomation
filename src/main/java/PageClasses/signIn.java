@@ -68,30 +68,7 @@ public class signIn extends TestBase{
 		return getCheckSignInText().isDisplayed();
 	}
 
-	public String sendData(String uname, String pass) throws InterruptedException {
-		emailId.sendKeys(uname);
-		Thread.sleep(2000);
-		password.sendKeys(pass);
-		Thread.sleep(2000);
-		signInButton.click();
-		
-		
-		/*WebDriverWait wait=new WebDriverWait(driver,30);
-		wait.until(ExpectedConditions.elementToBeSelected(checkSignInText));*/
-		
-		Thread.sleep(5000);
-		
-		/*if(sigInError.isDisplayed()) {
-			
-			return "SignIn UnsucessFull";
-		}
-		else {
-			System.out.println("Hi");
-			return "SignIn Successfull";
-		}*/
-		
-		return null;
-	}
+	
 
 	public createAccountPage createAccount(String email) {
 		newEmail.sendKeys(email);
